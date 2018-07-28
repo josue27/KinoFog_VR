@@ -5,9 +5,7 @@ using UnityEngine;
 public class Jelly_control : MonoBehaviour
 {
 
-    public Material[] materiales;
-    public float[] alphas;
-    public Color[] emission;
+    
     public float velocidad,velocidadImpulso,velocidadFrenado;
     public float tiempofrenado, tiempoImpulso;
     float sigTiempo;
@@ -18,17 +16,7 @@ public class Jelly_control : MonoBehaviour
     {
         sigTiempo = tiempofrenado;
         //enImpulso = true;
-        for (int i = 0; i < materiales.Length; i++)
-        {
-            alphas[i] = materiales[i].color.a;
-            emission[i] = materiales[i].GetColor("_EmissionColor");
-            Color tempAlfa = materiales[i].color;
-            tempAlfa.a = 0.0f;
-            materiales[i].color = tempAlfa;
-            materiales[i].SetColor("_EmissionColor", Color.black);
-            
-
-        }
+      
 	}
 	
 	// Update is called once per frame
@@ -52,10 +40,6 @@ public class Jelly_control : MonoBehaviour
             }
         }
         transform.Translate(Vector3.up *(Time.deltaTime * velocidad));
-        
 	}
-    public void Aparecer()
-    {
-
-    }
+  
 }

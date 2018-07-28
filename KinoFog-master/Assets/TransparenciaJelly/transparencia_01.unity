@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 552702812}
   - component: {fileID: 552702811}
   - component: {fileID: 552702809}
+  - component: {fileID: 552702808}
   m_Layer: 0
   m_Name: Jelly
   m_TagString: Untagged
@@ -217,6 +218,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &552702808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 552702807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a97c5dbdf879f5a49b07635ea0456f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeSpeed: 1
+  fadeColor: {r: 1, g: 1, b: 1, a: 0}
+  m_cabeza: {fileID: 2100000, guid: 76ed0d22ee65aa5469174f9709f0991a, type: 2}
+  m_tentaculos: {fileID: 2100000, guid: a0667418de862084f9865a3652c58335, type: 2}
+  m_interior: {fileID: 2100000, guid: 285cbb7c65596f84ba46a4f5c6e42777, type: 2}
 --- !u!114 &552702809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,18 +245,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8fa87e52f053dd4f81d16864d316ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materiales:
-  - {fileID: 2100000, guid: 76ed0d22ee65aa5469174f9709f0991a, type: 2}
-  - {fileID: 2100000, guid: 6dbec743243b09b40b2cdb6e7b3ae377, type: 2}
-  - {fileID: 2100000, guid: a0667418de862084f9865a3652c58335, type: 2}
-  alphas:
-  - 0
-  - 0
-  - 0
-  emission:
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
   velocidad: 0.3
   velocidadImpulso: 0.3
   velocidadFrenado: 0.1
@@ -481,6 +486,26 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.5364306
       objectReference: {fileID: 0}
+    - target: {fileID: 95174117545877130, guid: 14deae6874663534cae7d854fc0ece94,
+        type: 2}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 95174117545877130, guid: 14deae6874663534cae7d854fc0ece94,
+        type: 2}
+      propertyPath: m_UpdateMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137223823387300860, guid: 14deae6874663534cae7d854fc0ece94,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 76ed0d22ee65aa5469174f9709f0991a, type: 2}
+    - target: {fileID: 137806176918877118, guid: 14deae6874663534cae7d854fc0ece94,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 285cbb7c65596f84ba46a4f5c6e42777, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14deae6874663534cae7d854fc0ece94, type: 2}
   m_IsPrefabParent: 0
