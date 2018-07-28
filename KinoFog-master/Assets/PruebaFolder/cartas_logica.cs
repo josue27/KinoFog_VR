@@ -8,7 +8,7 @@ public class cartaControl : MonoBehaviour
     public Transform _jugadorPos, _mesaPos;
     public float velocidad;
     public BoxCollider collider;
-    public estatusCarta _estatusCarta;
+    public estatusCartas _estatusCartas;
     // Use this for initialization
     bool aJugador, aMesa;
 	void Start ()
@@ -52,7 +52,7 @@ public class cartaControl : MonoBehaviour
     void OnTriggerEnter(Collider coll)
     {
         print("Ento objeto");
-        if (!_estatusCarta.enJugador)
+        if (!_estatusCartas.enJugador)
         {
             CartaSeleccionada();
         }
@@ -65,7 +65,7 @@ public class cartaControl : MonoBehaviour
 
     public void CartaSeleccionada()
     {
-        _estatusCarta.enJugador = true;
+        _estatusCartas.enJugador = true;
         collider.enabled = false;
         aJugador = true;
     }
@@ -83,8 +83,8 @@ public class cartaControl : MonoBehaviour
             this.transform.position = Vector3.MoveTowards(this.transform.position, _jugadorPos.transform.position, Time.deltaTime * velocidad);
             if(this.transform.position == _jugadorPos.transform.position)
             {
-                _estatusCarta.enMovimiento = false;
-                _estatusCarta.enJugador = true;
+                _estatusCartas.enMovimiento = false;
+                _estatusCartas.enJugador = true;
                 collider.enabled = true;
                 print(transform.name + " esta en Jugador");
             }
@@ -97,7 +97,7 @@ public class cartaControl : MonoBehaviour
             this.transform.position = Vector3.MoveTowards(this.transform.position, _mesaPos.transform.position, Time.deltaTime * velocidad);
             if (this.transform.position == _mesaPos.transform.position)
             {
-                _estatusCarta.enJugador = false;
+                _estatusCartas.enJugador = false;
                 aMesa = false;
                 collider.enabled = true;
                 print(transform.name + " llego a mesa");
