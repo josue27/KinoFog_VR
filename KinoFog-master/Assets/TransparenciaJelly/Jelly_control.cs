@@ -11,12 +11,13 @@ public class Jelly_control : MonoBehaviour
     float sigTiempo;
     bool enImpulso;
     public Rigidbody rigid;
+    public Animator anim;
     // Use this for initialization
 	void Start ()
     {
         sigTiempo = tiempofrenado;
         //enImpulso = true;
-      
+        anim.speed = Random.Range(0.5f, 1.2f);
 	}
 	
 	// Update is called once per frame
